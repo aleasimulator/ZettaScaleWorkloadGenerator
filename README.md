@@ -16,6 +16,7 @@ All generated job entries are subsequently merged into a unified stream and sort
 * The data set used for input in SWF format is available at https://jsspp.org/workload/ 
 * Sample data set is provided within the distribution (see `./frontier-2025.txt`).
 * By default, the generator produces 10 different samples based on the original workload trace
+* Beside a *job trace*, the generator also generates files describing *users*, *groups* and *machines* (as required by AleaNG job scheduling simulator)
 
 
 ## Compiling and Running 
