@@ -24,7 +24,8 @@ Zettascale workload generator is distributed as **Netbeans project**, but can be
 
 ### Compilation on Linux systems
 On Linux-like systems, extract the downloaded zip folder and run the following commands:
-```
+
+```bash
 mkdir -p out
 javac -d out $(find src -name "*.java")
 ```
@@ -32,21 +33,26 @@ The `mkdir -p out` will create `./out` folder for the compiled bytecode. Next, `
 
 ### Compilation on Windows systems
 On Windows-like systems, extract the downloaded zip folder and run following commands (in **PowerShell**: `powershell.exe`):
-```
+
+```bash
 mkdir out
 $files = Get-ChildItem -Recurse -Filter *.java src | ForEach-Object { $_.FullName }
 javac -d out $files
 ```
+
 It is important to **run these commands in PowerShell**, since the standard `cmd.exe` uses a different syntax. 
 
 ### Running AleaNG on Linux systems
 On Linux-like systems, run:
-```
+
+```bash
 java -cp ./out zettascaleworkloadgenerator.ZettaScaleWorkloadGenerator
 ```
+
 ### Running AleaNG on Windows systems
 To run your program, you just need to call java with the correct classpath and your main class name (`ZettaScaleWorkloadGenerator`).
-```
+
+```cmd
 java -cp .\out\ zettascaleworkloadgenerator.ZettaScaleWorkloadGenerator
 ```
 
